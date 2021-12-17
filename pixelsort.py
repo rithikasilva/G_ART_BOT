@@ -26,11 +26,11 @@ def sort_pixels(image: Image, value: Callable, condition: Callable, rotation: in
 
 # sends to "new" + original image name ".jpg"
 def s_pixels(imagename):
-    sort_pixels(Image.open("./images/" + imagename + ".jpg"),
+    sort_pixels(Image.open("./working/" + imagename + ".png"),
                 lambda pixels: np.average(pixels, axis=2) / 255,
-                lambda lum: (lum > 2 / 6) & (lum < 4 / 6), 1).save("./pixel/pixel" + imagename+ '.jpg')
+                lambda lum: (lum > 2 / 6) & (lum < 4 / 6), 1).save("./working/" + imagename + ".png")
 
 
-s_pixels('leaf')
-#s_pixels('sky1')
-#s_pixels('mountain')
+
+
+

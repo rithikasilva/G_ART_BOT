@@ -1,0 +1,21 @@
+
+ImageDisplacement.py
+
+1. Rotate some squares in the image
+2. Swap some squares in the image
+3. Make half the image black on the right
+4. Inverts half the image on the right
+
+
+
+pixesort.py
+
+1. Pixel sorts the image given to it
+
+
+pixelate.py
+
+1. Pixelate a whole saved image
+2. pixelate a part given as a PIL image
+
+
