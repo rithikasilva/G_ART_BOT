@@ -4,17 +4,20 @@ from dotenv import load_dotenv
 
 
 def tweet_image(number):
-    load_dotenv()
 
+    # THIS BLOCK CHANGE FOR LOCAL RUNNING
+    load_dotenv()
     api_key = str(os.getenv('API_KEY'))
     secret_key = str(os.getenv('SECRET_KEY'))
     access_token = str(os.getenv('ACCESS_TOKEN'))
     access_token_secret = str(os.getenv('ACCESS_TOKEN_SECRET'))
-
-
     # Authenticate to Twitter
-    auth = tweepy.OAuthHandler(api_key, secret_key)
-    auth.set_access_token(access_token, access_token_secret)
+    #auth = tweepy.OAuthHandler(api_key, secret_key)
+    #auth.set_access_token(access_token, access_token_secret)
+
+    auth = tweepy.OAuthHandler('uBTSgPNWU3JSGM4N0Sksn9tBK', 'ZtNNeOah0jjHbJgyL813VQFvLZFsA8vGKUwPqiyE6a875pRcnd')
+    auth.set_access_token('1468702344053510160-ZsAVyA7VcDvktTcIdLJY05wiPhTYut',
+                          'm1b2T08m70WcgYpInu6fyC6jWYgq00L94Pu1MHMz2WTZe')
 
 
 
