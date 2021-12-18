@@ -1,19 +1,10 @@
 import tweepy
 import os
-from dotenv import load_dotenv
-
-
-load_dotenv()
 
 
 
 def tweet_image(number):
 
-    # THIS BLOCK CHANGE FOR LOCAL RUNNING
-    #api_key = str(os.getenv('API_KEY'))
-    #secret_key = str(os.getenv('SECRET_KEY'))
-    #access_token = str(os.getenv('ACCESS_TOKEN'))
-    #access_token_secret = str(os.getenv('ACCESS_TOKEN_SECRET'))
 
     api_key = os.environ['API_KEY']
     secret_key = os.environ['SECRET_KEY']

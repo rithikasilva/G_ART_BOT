@@ -58,5 +58,6 @@ f.close()
 # wait 60 seconds so that we don't have two runs
 #time.sleep(60)
 
+print("done")
 
 

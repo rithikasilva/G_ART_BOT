@@ -1,15 +1,14 @@
 from pyunsplash import PyUnsplash
 import requests
 import random
-
 import os
-from dotenv import load_dotenv
+
 
 
 def get_image():
-    load_dotenv()
 
-    ACCESS_KEY = str(os.getenv('ACCESS_KEY'))
+    ACCESS_KEY = os.environ['ACCESS_KEY']
+
 
     # instantiate PyUnsplash object
     pu = PyUnsplash(api_key= ACCESS_KEY)
