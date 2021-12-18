@@ -15,7 +15,7 @@ from twitterbot import tweet_image
 get_image()
 
 # Operate on the image using some random actions
-y = random.randint(1,6)
+y = random.randint(1,8)
 if y == 1:
      half_invert_pixel_sort("image_temp")
 elif y == 2:
