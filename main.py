@@ -1,6 +1,6 @@
 from imagedisplacement import square_rotate, displace_squares, half_back, invert_half
 from pixelate import pixelate_image, pixelate_piece
-from pixelsort import s_pixels
+from psorting import s_pixels
 from compositefunctions import half_invert_pixel_sort, half_invert_square_displace, half_invert_rotate_square, pixelate
 import random
 from unsplash import get_image
