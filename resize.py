@@ -1,7 +1,7 @@
 from PIL import Image
 import PIL
 
-
+# Resizes images to the rescritions of the twitter API for media upload
 def resize_image():
     fixed_width = 1280
     fixed_height = 1024

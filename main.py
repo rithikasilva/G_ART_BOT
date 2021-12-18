@@ -6,22 +6,15 @@ import random
 from unsplash import get_image
 from resize import resize_image
 from twitterbot import tweet_image
-import time
-import datetime
 
 
-# get current time
-#current_time = datetime.datetime.now()
-#hour = current_time.hour
-#minute = current_time.minute
 
-# Run at 2:00pm at every day
-#if (hour == 14) and (minute == 0):
+
 
  # Get an image
 get_image()
 
-# Operate on the image
+# Operate on the image using some random actions
 y = random.randint(1,6)
 if y == 1:
      half_invert_pixel_sort("image_temp")
@@ -55,9 +48,7 @@ f = open("number.txt", "w")
 f.write(str(number))
 f.close()
 
-# wait 60 seconds so that we don't have two runs
-#time.sleep(60)
-
+# Print done just for fun
 print("done")
 
 

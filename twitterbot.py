@@ -2,9 +2,8 @@ import tweepy
 import os
 
 
-
+# Tweets image in working folder with the input number provided for tweet
 def tweet_image(number):
-
 
     api_key = os.environ['API_KEY']
     secret_key = os.environ['SECRET_KEY']
@@ -14,7 +13,6 @@ def tweet_image(number):
     # Authenticate to Twitter
     auth = tweepy.OAuthHandler(api_key, secret_key)
     auth.set_access_token(access_token, access_token_secret)
-
 
 
     # Create API object
@@ -29,22 +27,6 @@ def tweet_image(number):
     tweet = "Number: " + str(number)
     api.update_status(status=tweet, media_ids=[media.media_id])
 
-
-
-# Create a tweet
-#recipient_id = sensitive.my_id  # ID of the user
-#api.send_direct_message(recipient_id, "Test Message")
-
-#messages = api.get_direct_messages(count=2)
-#for message in reversed(messages):
-  # who is sending?
-  #sender_id = message.message_create["sender_id"]
-  #print(sender_id)
-  # what is she saying?
-  #text = message.message_create["message_data"]["text"]
-  #print(text)
-
-#Remeber to wait because the message takes a couple minutes to appear
 
 
 

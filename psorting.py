@@ -2,8 +2,9 @@ import numpy as np
 from PIL import Image
 from typing import Callable
 
+# Pixel sorting algorithm written by u/GregTJ on reddit.
+# Full credit goes to them.
 
-# Written by u/GregTJ on reddit, so credits to them
 
 def sort_pixels(image: Image, value: Callable, condition: Callable, rotation: int = 0) -> Image:
     pixels = np.rot90(np.array(image), rotation)

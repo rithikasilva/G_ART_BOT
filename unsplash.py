@@ -4,18 +4,18 @@ import random
 import os
 
 
-
+# Gets a random image using random word in below array
 def get_image():
 
-    ACCESS_KEY = os.environ['ACCESS_KEY']
+    cars = ["sky", "cloud", "background"]
 
+    ACCESS_KEY = os.environ['ACCESS_KEY']
 
     # instantiate PyUnsplash object
     pu = PyUnsplash(api_key= ACCESS_KEY)
 
-    cars = ["sky", "cloud", "background"]
 
-
+    # Get's random query from array
     num = random.randint(0,2)
 
     #Featured true gives me less values to work with

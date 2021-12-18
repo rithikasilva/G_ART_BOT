@@ -2,7 +2,7 @@ from PIL import Image, ImageDraw, ImageOps
 import random
 
 
-
+# Rotates some random squares in an image
 def square_rotate(imgtitle):
     img = Image.open("./working/" + imgtitle + ".png")
     back_im = img.copy()
@@ -23,7 +23,7 @@ def square_rotate(imgtitle):
     back_im.save("./working/"+ imgtitle + ".png")
 
 
-
+# Swaps the position of some squares in an image
 def displace_squares(imgtitle):
     img = Image.open("./working/" + imgtitle + ".png")
     back_im = img.copy()
@@ -53,7 +53,7 @@ def displace_squares(imgtitle):
     back_im.save("./working/" + imgtitle + ".png")
 
 
-
+# Makes half the image black
 def half_back(imgtitle):
     img = Image.open("./working/" + imgtitle + ".png")
     back_im = img.copy()
@@ -68,7 +68,7 @@ def half_back(imgtitle):
     back_im.save("./working/" + imgtitle + ".png")
 
 
-
+# Inverts half the image
 def invert_half(imgtitle):
     img = Image.open("./working/" + imgtitle + ".png")
     back_im = img.copy()
