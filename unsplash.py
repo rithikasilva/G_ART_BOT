@@ -16,7 +16,7 @@ def get_image():
 
 
     # Get's random query from array
-    num = random.randint(0,2)
+    num = random.randint(0,1)
 
     #Featured true gives me less values to work with
     photos = pu.photos(type_='random', count=1, featured=False, query=cars[num])
