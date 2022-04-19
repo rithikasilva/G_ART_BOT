@@ -8,6 +8,7 @@ authors = ["RithikaSilva <<>>"]
 python = "^3.8"
 tweepy = "^4.4.0"
 pyunsplash = "^1.0.0-rc.2"
+Wand = "^0.6.7"
 
 [tool.poetry.dev-dependencies]
 

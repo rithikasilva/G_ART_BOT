@@ -1,44 +1,57 @@
-from imagedisplacement import square_rotate, displace_squares, half_back, invert_half
-from pixelate import pixelate_image, pixelate_piece
-from psorting import s_pixels
-from compositefunctions import half_invert_pixel_sort, half_invert_square_displace, half_invert_rotate_square, pixelate
+import imagedisplacement
+import pixelate
+import psorting
 import random
-from unsplash import get_image
-from resize import resize_image
-from twitterbot import tweet_image
+import unsplash
+import resize
+import twitterbot
+import swirl
+
+
+# Image name
+imagename = "image_temp"
 
 # Get an image
-get_image()
+unsplash.get_image(imagename)
 
 # Resize image for twitter restrictions and easier computation
-resize_image()
+resize.resize_image(imagename)
+
+
 
 # Operate on the image using some random actions
-y = random.randint(1, 8)
+y = random.randint(1, 9)
+
+
 if y == 1:
-	half_invert_pixel_sort("image_temp")
-elif y == 2:
-	half_invert_square_displace("image_temp")
-elif y == 3:
-	half_invert_rotate_square("image_temp")
+        imagedisplacement.invert_half(imagename)
+        psorting.s_pixels(imagename)
+elif y == 2:	
+        imagedisplacement.invert_half(imagename)
+        imagedisplacement. displace_squares(imagename)
+elif y == 3:	
+        imagedisplacement.invert_half(imagename)
+        imagedisplacement.square_rotate(imagename)
 elif y == 4:
-	pixelate("image_temp")
+	pixelate.pixelate_image(imagename)
 elif y == 5:
-	displace_squares("image_temp")
-elif y == 6:
-	s_pixels("image_temp")
-elif y == 7:
-	s_pixels("image_temp")
+	imagedisplacement.displace_squares(imagename)
+elif y == 6 or y == 7 or y == 8: 
+	psorting.s_pixels(imagename)
 else:
-	s_pixels("image_temp")
+        swirl.swirl_image(-360, imagename)
+
+
 
 # Gets the Current Number
 f = open("number.txt", "r")
 number = int(f.read())
 f.close()
 
+print(str(number))
+
 # Tweet the image
-tweet_image(number)
+twitterbot.tweet_image(number)
 
 # Increments number
 number = number + 1
@@ -48,3 +61,4 @@ f.close()
 
 # Print done just for fun
 print("done")
+

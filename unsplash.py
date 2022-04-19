@@ -5,7 +5,7 @@ import os
 
 
 # Gets a random image using random word in below array
-def get_image():
+def get_image(imgtitle):
 
     cars = ["sky", "cloud", "background"]
 
@@ -24,7 +24,7 @@ def get_image():
     print(photo.id, photo.link_download)
 
     response = requests.get(photo.link_download, allow_redirects=True)
-    open('./working/image_temp.png', 'wb').write(response.content)
+    open('./working/' + imgtitle + '.png', 'wb').write(response.content)
 
 
 
