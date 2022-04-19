@@ -81,3 +81,11 @@ def invert_half(imgtitle):
     back_im.save("./working/" + imgtitle + ".png")
 
 
+# Invert whole image
+def invert_colour(imgtitle):
+    img = Image.open("./working/" + imgtitle + ".png")
+    back_im = img.copy()
+    back_im = ImageOps.invert(back_im)
+    back_im.save("./working/" + imgtitle + ".png")
+
+

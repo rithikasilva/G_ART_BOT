@@ -7,7 +7,7 @@ import os
 # Gets a random image using random word in below array
 def get_image(imgtitle):
 
-    cars = ["sky", "cloud", "background"]
+    cars = ["sky", "cloud", "background", "water", "nature", "light"]
 
     ACCESS_KEY = os.environ['ACCESS_KEY']
 
@@ -16,7 +16,7 @@ def get_image(imgtitle):
 
 
     # Get's random query from array
-    num = random.randint(0,1)
+    num = random.randint(0,5)
 
     #Featured true gives me less values to work with
     photos = pu.photos(type_='random', count=1, featured=False, query=cars[num])
