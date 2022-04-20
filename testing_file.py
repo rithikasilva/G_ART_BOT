@@ -1,4 +1,4 @@
-import imagedisplacement
+import simple_operations
 import pixelate
 import psorting
 import random
@@ -31,27 +31,31 @@ while (loop):
   if y == 1:
     loop = False
   elif y == 2:
-    imagedisplacement.invert_half(imagename)
+    simple_operations.invert_half(imagename)
     psorting.s_pixels(imagename)
   elif y == 3:	
-    imagedisplacement.invert_half(imagename)
-    imagedisplacement. displace_squares(imagename)
+    simple_operations.invert_half(imagename)
+    simple_operations. displace_squares(imagename)
   elif y == 4:	
-    imagedisplacement.invert_half(imagename)
-    imagedisplacement.square_rotate(imagename)
+    simple_operations.invert_half(imagename)
+    simple_operations.square_rotate(imagename)
   elif y == 5:
   	pixelate.pixelate_image(imagename)
   elif y == 6:
-  	imagedisplacement.displace_squares(imagename)
+  	simple_operations.displace_squares(imagename)
   elif y == 7 or y == 8 or y == 9: 
   	psorting.s_pixels(imagename)
   elif y == 10:
     psorting.s_pixels(imagename)
     swirl.swirl_image(-360, imagename)
   elif y == 11:
-    swirl.swirl_image(-360, imagename)
+    swirl.swirl_image(-360, imagename) 
+  elif y == 12:
+   simple_operations.square_rotate(imagename)
+  elif y == 13:
+   simple_operations.crop_square(imagename)
   else:
-    imagedisplacement.invert_colour(imagename)
+   simple_operations.invert_colour(imagename)
   
 
 

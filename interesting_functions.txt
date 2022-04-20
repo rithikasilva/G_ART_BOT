@@ -1,0 +1,4 @@
+1. Pixel Sort
+2. Inverting Whole Colour
+3. Invert, Pixel, Swirl
+

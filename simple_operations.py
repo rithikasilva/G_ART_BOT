@@ -89,3 +89,11 @@ def invert_colour(imgtitle):
     back_im.save("./working/" + imgtitle + ".png")
 
 
+# Crops Image to Square
+def crop_square(imgtitle):
+    img = Image.open("./working/" + imgtitle + ".png")
+    width, height = img.size
+    width = min(width, height)
+    img_crop = img.crop((0, 0, width, width))
+    img_crop.save("./working/" + imgtitle + ".png")
+    
