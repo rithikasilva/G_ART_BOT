@@ -6,6 +6,8 @@ import unsplash
 import resize
 import twitterbot
 import swirl
+import glitch_effects
+
 
 
 # Image name
@@ -20,7 +22,7 @@ resize.resize_image(imagename)
 
 
 # Operate on the image using some random actions
-y = random.randint(1, 10)
+y = random.randint(1, 14)
 
 
 if y == 1:
@@ -43,9 +45,17 @@ elif y == 9:
   swirl.swirl_image(-360, imagename)
 elif y == 10:
   swirl.swirl_image(-360, imagename)
+elif y == 11:
+  psorting.s_pixels(imagename)
+  swirl.swirl_image(-360, imagename)
+  glitch_effects.make_gif(imagename)
+elif y == 12:
+  psorting.s_pixels(imagename)
+  glitch_effects.make_gif(imagename)
 else:
   simple_operations.invert_colour(imagename)
   
+
 
 
 

@@ -6,6 +6,7 @@ import unsplash
 import resize
 import twitterbot
 import swirl
+import glitch_effects
 
 
 # Image name
@@ -54,6 +55,8 @@ while (loop):
    simple_operations.square_rotate(imagename)
   elif y == 13:
    simple_operations.crop_square(imagename)
+  elif y == 14:
+    glitch_effects.make_scan_line_gif(imagename)
   else:
    simple_operations.invert_colour(imagename)
   
