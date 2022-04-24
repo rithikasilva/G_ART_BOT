@@ -25,6 +25,8 @@ resize.resize_image(imagename)
 y = random.randint(1, 14)
 
 
+y = 11
+
 if y == 1:
   simple_operations.invert_half(imagename)
   psorting.s_pixels(imagename)
@@ -48,7 +50,7 @@ elif y == 10:
 elif y == 11:
   psorting.s_pixels(imagename)
   swirl.swirl_image(-360, imagename)
-  glitch_effects.make_gif(imagename)
+  glitch_effects.make_scan_line(imagename)
 elif y == 12:
   psorting.s_pixels(imagename)
   glitch_effects.make_gif(imagename)

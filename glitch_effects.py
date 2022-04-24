@@ -7,7 +7,7 @@ from glitch_this import ImageGlitcher
 def make_gif(imgname):
     glitcher = ImageGlitcher()
     img = Image.open("./working/" + imgname + ".png")
-    glitch_img = glitcher.glitch_image(img, 2, color_offset=True, scan_line=True, gif=True)
+    glitch_img = glitcher.glitch_image(img, 2, color_offset=True, scan_lines=True, gif=True)
     glitch_img[0].save("./working/" + imgname + ".png",
                    format='GIF',
                    append_images=glitch_img[1:],
@@ -25,3 +25,14 @@ def make_scan_line_gif(imgname):
                    save_all=True,
                    duration=10,
                    loop=0)
+
+
+def make_scan_line(imgname):
+    glitcher = ImageGlitcher()
+    img = Image.open("./working/" + imgname + ".png")
+    glitch_img = glitcher.glitch_image(img, 1, color_offset=True, scan_lines=True)
+    glitch_img.save("./working/" + imgname + ".png")
+
+
+
+
