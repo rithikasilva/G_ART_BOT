@@ -22,10 +22,9 @@ resize.resize_image(imagename)
 
 
 # Operate on the image using some random actions
-y = random.randint(1, 14)
+y = random.randint(1, 12)
 
 
-y = 11
 
 if y == 1:
   simple_operations.invert_half(imagename)
@@ -38,7 +37,8 @@ elif y == 3:
   simple_operations.square_rotate(imagename)
 elif y == 4:
 	pixelate.pixelate_image(imagename)
-elif y == 5:
+# Removing this one because I think it is generally not a enough of a modification
+elif y == 0:
 	simple_operations.displace_squares(imagename)
 elif y == 6 or y == 7 or y == 8: 
 	psorting.s_pixels(imagename)
@@ -51,11 +51,10 @@ elif y == 11:
   psorting.s_pixels(imagename)
   swirl.swirl_image(-360, imagename)
   glitch_effects.make_scan_line(imagename)
-elif y == 12:
+else:
   psorting.s_pixels(imagename)
   glitch_effects.make_gif(imagename)
-else:
-  simple_operations.invert_colour(imagename)
+
   
 
 
