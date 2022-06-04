@@ -7,7 +7,7 @@ Currently, Jean needs me to run them in order to post. :slightly_frowning_face:
 
 Jean will recieve an update in the future to let them be independent.
 
-Results can be found at:
+Produced images can be found at:
 https://twitter.com/Jean_Art_Bot
 
 
